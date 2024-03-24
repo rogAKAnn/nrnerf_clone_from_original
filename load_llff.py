@@ -21,7 +21,7 @@ def load_llff_data(datadir, factor, recenter, bd_factor, spherify):
             [
                 imageio.imread(
                     os.path.join("./data/example_sequence/images/", image),
-                    ignoregamma=True,
+                    apply_gamma=False,
                 )
                 for image in images
             ],

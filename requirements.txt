@@ -1,0 +1,9 @@
+torch
+configargparse
+torchvision
+imageio
+imageio-ffmpeg
+matplotlib
+tqdm
+scikit-image
+opencv

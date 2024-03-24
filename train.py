@@ -1298,7 +1298,7 @@ def get_full_resolution_intrinsics(args, dataset_extras):
             imgnames = [f for f in sorted(os.listdir(imgdir)) if f.endswith('JPG') or f.endswith('jpg') or f.endswith('png')]
             imgfiles = [os.path.join(imgdir, f) for f in imgnames]
             def imread(f):
-                return imageio.imread(f, ignoregamma=True) if f[-4:] == ".png" else imageio.imread(f)
+                return imageio.imread(f, apply_gamma=False) if f[-4:] == ".png" else imageio.imread(f)
             height, width, _ = imread(imgfiles[0]).shape
             return imgfiles, height, width
 
